@@ -160,7 +160,7 @@ DIR=$(mktemp -d) && cd ${DIR} && \
 # ImageMagick
 DIR=$(mktemp -d) && cd ${DIR} && \
               curl -s http://www.imagemagick.org/download/ImageMagick-${IMAGEMAGICK_VERSION}.tar.gz | tar zxvf - -C . && \
-              cd ImageMagick-${FDKAAC_VERSION} && \
+              cd ImageMagick-${IMAGEMAGICK_VERSION} && \
               ./configure --prefix="${SRC}" && \
               make && \
               make install && \
