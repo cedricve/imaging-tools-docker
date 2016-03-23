@@ -28,6 +28,7 @@ ENV           FFMPEG_VERSION=3.0 \
               XVID_VERSION=1.3.4   \
               FDKAAC_VERSION=0.1.4 \
               X265_VERSION=1.9     \
+              JP2A_VERSION=1.0.6   \
               IMAGEMAGICK_VERSION=6.9.3-7
 
 
