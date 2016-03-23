@@ -1,15 +1,15 @@
 FFMPEG for Docker on Centos7
 ============================
 
-[![Image Size](https://img.shields.io/imagelayers/image-size/jrottenberg/ffmpeg/latest.svg?style=plastic)](https://imagelayers.io/?images=jrottenberg%2Fffmpeg:latest) [![Image Layers](https://img.shields.io/imagelayers/layers/jrottenberg/ffmpeg/latest.svg?style=plastic)](https://imagelayers.io/?images=jrottenberg%2Fffmpeg:latest) [![Docker Stars](https://img.shields.io/docker/stars/jrottenberg/ffmpeg.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/jrottenberg/ffmpeg/stars/count/) [![Docker pulls](https://img.shields.io/docker/pulls/jrottenberg/ffmpeg.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/jrottenberg/ffmpeg/)
+[![Image Size](https://img.shields.io/imagelayers/image-size/skidder/ffmpeg/latest.svg?style=plastic)](https://imagelayers.io/?images=skidder%2Fffmpeg:latest) [![Image Layers](https://img.shields.io/imagelayers/layers/skidder/ffmpeg/latest.svg?style=plastic)](https://imagelayers.io/?images=skidder%2Fffmpeg:latest) [![Docker Stars](https://img.shields.io/docker/stars/skidder/ffmpeg.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/skidder/ffmpeg/stars/count/) [![Docker pulls](https://img.shields.io/docker/pulls/skidder/ffmpeg.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/skidder/ffmpeg/)
 
 This project prepares a minimalist Docker image with FFMPEG. It compiles FFMPEG from sources following instructions from the [Centos Compilation Guide](https://trac.ffmpeg.org/wiki/CompilationGuide/Centos).
 
-You can install the latest build of this image by running `docker pull jrottenberg/ffmpeg`.
+You can install the latest build of this image by running `docker pull skidder/ffmpeg`.
 
 This image can be used as a base for an encoding farm, based on centos7.
 
-Please use [Github issues](https://github.com/jrottenberg/ffmpeg/issues/new) to report any bug or missing feature.
+Please use [Github issues](https://github.com/skidder/ffmpeg/issues/new) to report any bug or missing feature.
 
 Test
 ----
@@ -57,7 +57,7 @@ ffmpeg version 3.0 Copyright (c) 2000-2016 the FFmpeg developers
 Capture output from the container to the host running the command
 
 ```
- docker run jrottenberg/ffmpeg \
+ docker run skidder/ffmpeg \
             -i http://url/to/media.mp4 \
             -stats \
             $ffmpeg_options  - > out.mp4
@@ -66,7 +66,7 @@ Capture output from the container to the host running the command
 ### Example
 
 ```
- docker run jrottenberg/ffmpeg -stats  \
+ docker run skidder/ffmpeg -stats  \
         -i http://archive.org/download/thethreeagesbusterkeaton/Buster.Keaton.The.Three.Ages.ogv \
         -loop 0  \
         -final_delay 500 -c:v gif -f gif -ss 00:49:42 -t 5 - > trow_ball.gif
@@ -76,7 +76,7 @@ See what's inside the beast
 ---------------------------
 
 ```
-$ docker run -it --entrypoint='bash' jrottenberg/ffmpeg
+$ docker run -it --entrypoint='bash' skidder/ffmpeg
 bash-4.1# for i in yasm x264 x265 ogg opus theora vorbis vpx mp3lame faac xvid fdk ;do echo $i; find /usr/local/ -name "*$i*";done
 ```
 

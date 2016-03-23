@@ -157,4 +157,24 @@ DIR=$(mktemp -d) && cd ${DIR} && \
               cp qt-faststart ${SRC}/bin && \
               rm -rf ${DIR}
 
+# ImageMagick
+DIR=$(mktemp -d) && cd ${DIR} && \
+              curl -s http://www.imagemagick.org/download/ImageMagick-${IMAGEMAGICK_VERSION}.tar.gz | tar zxvf - -C . && \
+              cd ImageMagick-${FDKAAC_VERSION} && \
+              ./configure --prefix="${SRC}" && \
+              make && \
+              make install && \
+              make distclean && \
+              rm -rf ${DIR}
+
+# jp2a
+DIR=$(mktemp -d) && cd ${DIR} && \
+              curl -s http://jaist.dl.sourceforge.net/project/jp2a/jp2a/${JP2A_VERSION}/jp2a-${JP2A_VERSION}.tar.gz | tar zxvf - -C . && \
+              cd jp2a-${JP2A_VERSION} && \
+              ./configure --prefix="${SRC}" && \
+              make && \
+              make install && \
+              make distclean && \
+              rm -rf ${DIR}
+
 yum history -y undo last && yum clean all && rm -rf /var/lib/yum/*
