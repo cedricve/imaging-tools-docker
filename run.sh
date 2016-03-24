@@ -8,7 +8,7 @@ export MAKEFLAGS="-j$[$(nproc) + 1]"
 export SRC=/usr/local
 export PKG_CONFIG_PATH=${SRC}/lib/pkgconfig
 
-yum install -y autoconf automake gcc gcc-c++ git libtool make nasm zlib-devel openssl-devel tar cmake perl which bzip2
+yum install -y autoconf automake gcc gcc-c++ git libtool make nasm zlib-devel openssl-devel tar cmake perl which bzip2 libjpeg-devel
 
 # yasm
 DIR=$(mktemp -d) && cd ${DIR} && \
@@ -169,8 +169,9 @@ DIR=$(mktemp -d) && cd ${DIR} && \
 
 # jp2a
 DIR=$(mktemp -d) && cd ${DIR} && \
-              curl -s http://jaist.dl.sourceforge.net/project/jp2a/jp2a/${JP2A_VERSION}/jp2a-${JP2A_VERSION}.tar.gz | tar zxvf - -C . && \
+              curl -s https://github.com/skidder/jp2a/archive/${JP2A_VERSION}.tar.gz | tar zxvf - -C . && \
               cd jp2a-${JP2A_VERSION} && \
+              autoreconf -vi && \
               ./configure --prefix="${SRC}" && \
               make && \
               make install && \
