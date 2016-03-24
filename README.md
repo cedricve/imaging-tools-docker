@@ -1,9 +1,9 @@
-FFMPEG for Docker on Centos7
+FFMPEG + ImageMagick + JP2A for Docker on Centos7
 ============================
 
 [![Image Size](https://img.shields.io/imagelayers/image-size/skidder/ffmpeg/latest.svg?style=plastic)](https://imagelayers.io/?images=skidder%2Fffmpeg:latest) [![Image Layers](https://img.shields.io/imagelayers/layers/skidder/ffmpeg/latest.svg?style=plastic)](https://imagelayers.io/?images=skidder%2Fffmpeg:latest) [![Docker Stars](https://img.shields.io/docker/stars/skidder/ffmpeg.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/skidder/ffmpeg/stars/count/) [![Docker pulls](https://img.shields.io/docker/pulls/skidder/ffmpeg.svg?style=plastic)](https://registry.hub.docker.com/v2/repositories/skidder/ffmpeg/)
 
-This project prepares a minimalist Docker image with FFMPEG. It compiles FFMPEG from sources following instructions from the [Centos Compilation Guide](https://trac.ffmpeg.org/wiki/CompilationGuide/Centos).
+This project prepares a minimalist Docker image with FFMPEG, IamgeMagick, and JP2A. It compiles FFMPEG from sources following instructions from the [Centos Compilation Guide](https://trac.ffmpeg.org/wiki/CompilationGuide/Centos).
 
 You can install the latest build of this image by running `docker pull skidder/ffmpeg`.
 
@@ -95,5 +95,5 @@ Keep uptodate
 -	XVID_VERSION 1.3.4 https://labs.xvid.com/source/
 -	FDKAAC_VERSION 0.1.4 https://github.com/mstorsjo/fdk-aac/releases
 -	X265_VERSION 1.9 https://bitbucket.org/multicoreware/x265/downloads
-- JP2A_VERSION 1.0.7
-- IMAGEMAGICK_VERSION 6.9.3-7
+- JP2A_VERSION 1.0.7 https://github.com/skidder/jp2a/releases
+- IMAGEMAGICK_VERSION 6.9.3-7 http://www.imagemagick.org/download/
