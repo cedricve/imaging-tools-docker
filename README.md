@@ -96,4 +96,4 @@ Keep uptodate
 -	FDKAAC_VERSION 0.1.4 https://github.com/mstorsjo/fdk-aac/releases
 -	X265_VERSION 1.9 https://bitbucket.org/multicoreware/x265/downloads
 - JP2A_VERSION 1.0.7 https://github.com/skidder/jp2a/releases
-- IMAGEMAGICK_VERSION 6.9.3-7 http://www.imagemagick.org/download/
+- IMAGEMAGICK_VERSION 6.7.8.9 http://www.imagemagick.org/download/

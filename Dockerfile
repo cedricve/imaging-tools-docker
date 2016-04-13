@@ -29,7 +29,7 @@ ENV           FFMPEG_VERSION=3.0 \
               FDKAAC_VERSION=0.1.4 \
               X265_VERSION=1.9     \
               JP2A_VERSION=1.0.7   \
-              IMAGEMAGICK_VERSION=6.9.3-7
+              IMAGEMAGICK_VERSION=6.7.8.9
 
 
 # See https://github.com/skidder/ffmpeg/blob/master/run.sh

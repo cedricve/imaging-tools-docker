@@ -8,7 +8,7 @@ export MAKEFLAGS="-j$[$(nproc) + 1]"
 export SRC=/usr/local
 export PKG_CONFIG_PATH=${SRC}/lib/pkgconfig
 
-yum install -y libjpeg libgomp
+yum install -y libjpeg libgomp ImageMagick-${IMAGEMAGICK_VERSION}
 yum install -y autoconf automake gcc gcc-c++ git libtool make nasm zlib-devel openssl-devel tar cmake perl which bzip2 libjpeg-devel
 
 # yasm
@@ -156,16 +156,6 @@ DIR=$(mktemp -d) && cd ${DIR} && \
               cd tools && \
               make qt-faststart && \
               cp qt-faststart ${SRC}/bin && \
-              rm -rf ${DIR}
-
-# ImageMagick
-DIR=$(mktemp -d) && cd ${DIR} && \
-              curl -s http://www.imagemagick.org/download/ImageMagick-${IMAGEMAGICK_VERSION}.tar.gz | tar zxvf - -C . && \
-              cd ImageMagick-${IMAGEMAGICK_VERSION} && \
-              ./configure --prefix="${SRC}" && \
-              make && \
-              make install && \
-              make distclean && \
               rm -rf ${DIR}
 
 # jp2a
