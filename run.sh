@@ -160,7 +160,7 @@ DIR=$(mktemp -d) && cd ${DIR} && \
 
 # jp2a
 DIR=$(mktemp -d) && cd ${DIR} && \
-              curl -L -s https://github.com/skidder/jp2a/archive/${JP2A_VERSION}.tar.gz | tar zxvf - -C . && \
+              curl -s http://jaist.dl.sourceforge.net/project/jp2a/jp2a/${JP2A_VERSION}/jp2a-${JP2A_VERSION}.tar.gz | tar zxvf - -C . && \
               cd jp2a-${JP2A_VERSION} && \
               autoreconf -vi && \
               ./configure --prefix="${SRC}" && \

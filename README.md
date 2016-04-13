@@ -95,5 +95,5 @@ Keep uptodate
 -	XVID_VERSION 1.3.4 https://labs.xvid.com/source/
 -	FDKAAC_VERSION 0.1.4 https://github.com/mstorsjo/fdk-aac/releases
 -	X265_VERSION 1.9 https://bitbucket.org/multicoreware/x265/downloads
-- JP2A_VERSION 1.0.7 https://github.com/skidder/jp2a/releases
+- JP2A_VERSION 1.0.6 https://csl.name/jp2a/
 - IMAGEMAGICK_VERSION 6.7.8.9 http://www.imagemagick.org/download/
