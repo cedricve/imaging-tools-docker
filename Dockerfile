@@ -33,7 +33,7 @@ ENV         FFMPEG_VERSION=3.0.2 \
 
 RUN     export MAKEFLAGS="-j$[$(nproc) + 1]" && \
         echo "${SRC}/lib" > /etc/ld.so.conf.d/libc.conf && \
-        yum install -y file-devel libjpeg libgomp ImageMagick-${IMAGEMAGICK_VERSION} \
+        yum install -y file-devel libjpeg libgomp ImageMagick-${IMAGEMAGICK_VERSION} && \
         yum install -y autoconf automake gcc gcc-c++ git libtool make nasm zlib-devel openssl-devel tar cmake perl which bzip2 libjpeg-devel && \
         DIR=$(mktemp -d) && cd ${DIR} && \
 # yasm
