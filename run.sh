@@ -8,7 +8,10 @@ export MAKEFLAGS="-j$[$(nproc) + 1]"
 export SRC=/usr/local
 export PKG_CONFIG_PATH=${SRC}/lib/pkgconfig
 
-yum install -y libjpeg libgomp ImageMagick-${IMAGEMAGICK_VERSION}
+# Install dependencies to keep
+yum install -y file-devel libjpeg libgomp ImageMagick-${IMAGEMAGICK_VERSION}
+
+# Install dependencies that should be removed after compilation finishes
 yum install -y autoconf automake gcc gcc-c++ git libtool make nasm zlib-devel openssl-devel tar cmake perl which bzip2 libjpeg-devel
 
 # yasm
